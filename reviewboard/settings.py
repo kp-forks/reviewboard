@@ -708,4 +708,9 @@ CUSTOM_PYGMENTS_LEXERS = {
 }
 
 
+# Opt in to the new behavior for URL fields in forms. This setting can be
+# removed once we're on Django 6.0+.
+FORMS_URLFIELD_ASSUME_HTTPS = True
+
+
 fail_if_missing_dependencies()
