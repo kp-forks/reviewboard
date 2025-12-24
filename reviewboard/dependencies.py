@@ -24,7 +24,7 @@ if TYPE_CHECKING:
 ###########################################################################
 
 #: The minimum supported version of Python.
-PYTHON_MIN_VERSION = (3, 9)
+PYTHON_MIN_VERSION = (3, 10)
 
 #: A string representation of the minimum supported version of Python.
 PYTHON_MIN_VERSION_STR = '%s.%s' % (PYTHON_MIN_VERSION)
@@ -37,13 +37,13 @@ PYTHON_MIN_VERSION_STR = '%s.%s' % (PYTHON_MIN_VERSION)
 
 
 #: The major version of Django we're using for documentation.
-django_doc_major_version = '4.2'
+django_doc_major_version = '5.2'
 
 #: The major version of Djblets we're using for documentation.
 djblets_doc_major_version = '6.x'
 
 #: The version of Django required for the current version of Python.
-django_version = '~=4.2.23'
+django_version = '~=5.2.9'
 
 #: The version range required for Djblets.
 djblets_version = '~=6.0a0.dev0'
@@ -59,10 +59,10 @@ package_dependencies: Mapping[str, Dependency] = {
     'cryptography': '~=41.0.7',
     'Django': django_version,
     'django-cors-headers': '~=3.11.0',
-    'django_evolution': '~=2.4.2',
-    'django-haystack': '~=3.2.1',
+    'django_evolution': '~=3.0.0a0',
+    'django-haystack': '~=3.3.0',
     'django_oauth_toolkit': '~=1.6.3',
-    'django-storages': '~=1.14.2',
+    'django-storages': '~=1.14.6',
     'Djblets': djblets_version,
     'docutils': '',
     'markdown': '~=3.3.7',
