@@ -84,7 +84,6 @@ package_dependencies: Mapping[str, Dependency] = {
     # we're Python 3+ only.
     'pymdown-extensions': '~=6.3.0',
     'pymemcache': '',
-    'pytz': '>=2015.2',
     'tqdm': '~=4.66.2',
     'Whoosh': '>=2.6',
 

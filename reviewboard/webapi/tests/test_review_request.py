@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from zoneinfo import ZoneInfo
+
 import kgb
 from django_assert_queries.testing import assert_queries
 from django.contrib import auth
@@ -16,7 +18,6 @@ from djblets.webapi.errors import (DOES_NOT_EXIST,
                                    INVALID_FORM_DATA,
                                    PERMISSION_DENIED)
 from djblets.webapi.testing.decorators import webapi_test_template
-from pytz import timezone
 
 from reviewboard.accounts.backends import AuthBackend
 from reviewboard.accounts.testing.queries import get_user_permissions_equeries
@@ -756,7 +757,7 @@ class ResourceListTests(kgb.SpyAgency, ExtraDataListMixin, SSLTestsMixin,
         ambiguous timestamp
         """
         self.spy_on(get_current_timezone,
-                    call_fake=lambda: timezone('America/Chicago'))
+                    call_fake=lambda: ZoneInfo('America/Chicago'))
 
         rsp = self.api_get(
             get_review_request_list_url(),
