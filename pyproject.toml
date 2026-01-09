@@ -90,9 +90,6 @@ filterwarnings = [
     # Ignore all paramiko "Unknown key" warnings.
     "ignore:Unknown .* host key for localhost",
 
-    # Ignore until we upgrade pymdownx.
-    "ignore:'etree' is deprecated. Use 'xml.etree.ElementTree' instead.",
-
     # Ignore warnings inside paramiko
     "ignore:setDaemon() is deprecated, set the daemon attribute instead",
     "ignore:notifyAll() is deprecated, use notify_all() instead",

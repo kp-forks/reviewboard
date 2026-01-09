@@ -65,7 +65,7 @@ package_dependencies: Mapping[str, Dependency] = {
     'django-storages': '~=1.14.6',
     'Djblets': djblets_version,
     'docutils': '',
-    'markdown': '~=3.3.7',
+    'markdown': '~=3.10.0',
     'mimeparse': '~=0.1.3',
     'packaging': '>=23.1',
     'paramiko': '~=3.4.1',
@@ -80,9 +80,7 @@ package_dependencies: Mapping[str, Dependency] = {
     # This must match cryptography compatibility.
     'pyOpenSSL': '~=23.2.0',
 
-    # TODO: We can migrate to the latest pymdown-extensions release now that
-    # we're Python 3+ only.
-    'pymdown-extensions': '~=6.3.0',
+    'pymdown-extensions': '~=10.20',
     'pymemcache': '',
     'tqdm': '~=4.66.2',
     'Whoosh': '>=2.6',
