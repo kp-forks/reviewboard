@@ -61,7 +61,7 @@ package_dependencies: Mapping[str, Dependency] = {
     'django-cors-headers': '~=3.11.0',
     'django_evolution': '~=3.0.0a0',
     'django-haystack': '~=3.3.0',
-    'django_oauth_toolkit': '~=1.6.3',
+    'django_oauth_toolkit': '~=3.2.0',
     'django-storages': '~=1.14.6',
     'Djblets': djblets_version,
     'docutils': '',
@@ -84,14 +84,6 @@ package_dependencies: Mapping[str, Dependency] = {
     'pymemcache': '',
     'tqdm': '~=4.66.2',
     'Whoosh': '>=2.6',
-
-    # The following are pinned versions/ranges needed to satisfy dependency
-    # conflicts between multiple projects. We are not using these directly.
-    # These should be removed in future versions of Review Board as
-    # dependencies change.
-
-    # django-oauth-toolkit dependencies:
-    'django-braces': '==1.13.0',
 }
 
 #: Dependencies only specified during the packaging process.

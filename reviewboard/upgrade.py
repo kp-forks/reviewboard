@@ -244,7 +244,7 @@ def post_upgrade_reset_oauth2_provider(
     unrecord_applied_migrations(connection=connection,
                                 app_label='oauth2_provider')
 
-    # This is current as of oauth2_provider 1.6.3.
+    # This is current as of oauth2_provider 3.2.0.
     record_applied_migrations(
         connection=connection,
         migrations=MigrationList.from_names(
@@ -255,6 +255,14 @@ def post_upgrade_reset_oauth2_provider(
                 '0003_auto_20201211_1314',
                 '0004_auto_20200902_2022',
                 '0005_auto_20211222_2352',
+                '0006_alter_application_client_secret',
+                '0007_application_post_logout_redirect_uris',
+                '0008_alter_accesstoken_token',
+                '0009_add_hash_client_secret',
+                '0010_application_allowed_origins',
+                '0011_refreshtoken_token_family',
+                '0012_add_token_checksum',
+                '0013_alter_application_authorization_grant_type_device',
             ]))
 
 
