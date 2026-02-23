@@ -1,6 +1,6 @@
 [build-system]
 requires = [
-    'setuptools>=75',
+    'setuptools>=75,<82',
 ]
 build-backend = 'build-backend'
 backend-path = ['.']
