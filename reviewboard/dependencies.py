@@ -59,7 +59,7 @@ package_dependencies: Mapping[str, Dependency] = {
     'cryptography': '~=41.0.7',
     'Django': django_version,
     'django-cors-headers': '~=3.11.0',
-    'django_evolution': '~=3.0.0a0',
+    'django_evolution': '>=3.0a0.dev0,==3.*',
     'django-haystack': '~=3.3.0',
     'django_oauth_toolkit': '~=3.2.0',
     'django-storages': '~=1.14.6',
