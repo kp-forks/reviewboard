@@ -1764,7 +1764,7 @@ def fetch_response_data(response_class, mimetype, request, **kwargs):
     """
     request.META['HTTP_ACCEPT'] = mimetype
 
-    response = response_class(request=request, **kwargs)
+    response = response_class(request, **kwargs)
     headers = response.headers
     status_code = response.status_code
 
