@@ -187,7 +187,16 @@ def decrypt_password(encrypted_password, key=None):
         ValueError:
             The encryption key was not in the right format.
     """
-    return (
+    result = (
         aes_decrypt(base64.b64decode(encrypted_password), key=key)
         .decode('utf-8')
     )
+
+    if not result.isprintable():
+        raise ValueError(
+            'Unable to decrypt stored password: decrypted data contains '
+            'unprintable characters. It is likely that the SECRET_KEY has '
+            'changed.'
+        )
+
+    return result
