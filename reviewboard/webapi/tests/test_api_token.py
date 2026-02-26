@@ -231,7 +231,7 @@ class ResourceListTests(SpyAgency, ExtraDataListMixin, BaseWebAPITestCase,
         # When no timezone is specified, the user's profile's timezone
         # will be used.
         profile = self.user.get_profile()
-        profile.timezone = 'US/Eastern'
+        profile.timezone = 'America/New_York'
         profile.save(update_fields=('timezone',))
 
         expires = datetime(2022, 9, 20, 13, 42, 0)
@@ -459,7 +459,7 @@ class ResourceItemTests(ExtraDataItemMixin, BaseWebAPITestCase,
         # When no timezone is specified, the user's profile's timezone
         # will be used.
         profile = self.user.get_profile()
-        profile.timezone = 'US/Eastern'
+        profile.timezone = 'America/New_York'
         profile.save(update_fields=('timezone',))
 
         token = self.create_webapi_token(self.user)
